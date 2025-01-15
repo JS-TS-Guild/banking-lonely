@@ -1,5 +1,7 @@
+import { BankAccountId } from "@/types/Common";
+
 export default class BankAccount {
-  private id: string;
+  private id: BankAccountId;
   private balance: number;
 
   constructor(initialBalance: number) {
@@ -13,5 +15,9 @@ export default class BankAccount {
 
   setBalance(balance: number): void {
     this.balance = balance;
+  }
+
+  getBalance(id: BankAccountId) {
+    return this.balance;
   }
 }

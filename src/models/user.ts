@@ -1,7 +1,8 @@
 import BankAccount from "@/models/bank-account";
+import { UserId } from "@/types/Common";
 
 export default class User {
-  private id: string;
+  private id: UserId;
   private accounts: string[];
 
   static create(name?: string, accounts?: string[]): User {
